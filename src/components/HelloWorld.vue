@@ -28,13 +28,23 @@
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
   </div>
+
+  <div>{{threads}}</div>
+
 </template>
 
 <script>
+import sourceData from '@/data.json'
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data () {
+    return {
+      threads: sourceData.threads
+    }
   }
 }
 </script>
